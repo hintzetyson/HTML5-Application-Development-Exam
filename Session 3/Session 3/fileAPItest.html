@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>File API Test</title>
+    
+    <script>
+        if (window.File && window.FileReader && window.FileList && window.Blob) {
+            alert('This browser supports File APIs');
+            }
+        else {
+            alert('This browser does not fully support File APIs')
+        }
+        
+
+    </script>
+</head>
+    <body>
+       <dl>File API Terms</dl> 
+        <dt>File</dt>
+        <dd>Has file attributes (read-only, name, media type, etc.) and reads in the file as a URL.</dd>
+        <dt>FileList</dt>
+        <dd>An array-like sequence of file objects. Also allows for dragging a folder of files from local storage.</dd>
+        <dt>Blob</dt>
+        <dd>Access to raw binary data.</dd>
+        <dt>FileReader</dt>
+        <dd>Allows for methods to read and display a file.</dd>
+    </body>
+</html>

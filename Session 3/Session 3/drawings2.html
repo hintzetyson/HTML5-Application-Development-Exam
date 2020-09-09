@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Drawing examples</title>
+
+<script>
+    function loadCanvas() {
+        var cvs = document.getElementById("canvasTest");
+        context = cvs.getContext("2d");
+        context.fillStyle = "rgb(255,0,0)";
+        context.fillRect(10, 20, 100, 100);
+    }
+    function moveTicker() {
+        next = current + "px";
+        current += 1;
+        if (current > 400) {
+            current = 0;
+        }
+        para.style.left = next;
+        var timing = 100; 
+        setTimeout(moveTicker, timing);
+    }
+    function initPar() {
+        para = document.getElementById("ticker");
+        para.style.position = "absolute";
+        current = 0;
+        moveTicker();
+    }  
+
+</script>
+</head>
+<body onload="loadCanvas();initPar();">
+<canvas id = "canvasTest" width="200" height="200">
+</canvas>
+   
+        <br/>
+Tennis ball <br/>
+<svg id="tennisball" height="100">
+    <defs>
+        <filter id="f1" x="0" y="0">
+            <feGaussianBlur stdDeviation="10" />
+        </filter>
+    </defs>
+    <circle id="greenball" cx="40" cy="40" r="40" fill="#88FF88" filter="url(#f1)" />
+</svg>
+    <p id="ticker">
+        Special: 30% off of tennis lessons. Check at the tennis counter for details.
+    </p>
+    </body>
+</html>

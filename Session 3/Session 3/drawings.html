@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Drawing examples</title>
+
+<script>
+    function loadCanvas() {
+        var cvs = document.getElementById("canvasTest");
+        context = cvs.getContext("2d");
+        var grad = context.createLinearGradient(0, 0, 100, 0);
+        grad.addColorStop(0.25, "rgb(255,0,0)");
+        grad.addColorStop(0.75, "rgb(50,0,0)");
+        context.rotate(30 * Math.PI /180);
+        context.fillStyle = grad;
+        context.fillRect(10, 20, 100, 100);
+    }
+
+
+</script>
+</head>
+<body onload="loadCanvas();">
+<canvas id = "canvasTest" width="200" height="200">
+</canvas>
+   
+        <br/>
+Tennis ball <br/>
+<svg id="tennisball" height="100">
+    <defs>
+        <filter id="f1" x="0" y="0">
+            <feGaussianBlur stdDeviation="10" />
+        </filter>
+    </defs>
+    <circle id="greenball" cx="40" cy="40" r="40" fill="#88FF88" filter="url(#f1)" />
+</svg>
+    <p id="ticker">
+        Special: 30% off of tennis lessons. Check at the tennis counter for details.
+    </p>
+    </body>
+</html>

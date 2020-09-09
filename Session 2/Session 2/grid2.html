@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Grid example</title>
+        <style>
+            #layout {
+                background-color:  #f8bd60;
+                display: -ms-grid;
+                -ms-grid-rows: 100px auto 50px;
+                -ms-grid-columns: 1fr 3fr;
+            }
+            #header {
+                -ms-grid-row: 1;
+            }
+            #main {
+                -ms-grid-row: 2;
+                -ms-grid-column: 2;
+                background-color:  #0ff;
+            }
+            #nav {
+                -ms-grid-row:  2;
+                -ms-grid-column:1;
+                background-color:  #EEEEEE;
+            }
+            #footer {
+                -ms-grid-row:  3;
+            }
+            #gridtemplate {
+                grid-template: "abc";
+                grid-rows: auto;
+                grid-columns: 1fr 2fr 1fr;
+            }
+        </style>
+    </head>
+    <body>
+    This is a possible future layout for the site. This is an example of using a grid layout.   The stylesheet is internal to the page. 
+<div id="layout">
+    <div id="header">
+    Header content goes here
+    </div>
+    <div id="main">
+   Main content goes here
+    </div>
+    <div id="nav">
+    Navigation goes here
+    </div>
+    <div id="footer">
+  Footer goes here
+        </div>
+</div>
+<hr/>
+<div id="gridtemplate">
+    <div style="flow: a">news</div>
+    <div style="flow: b">weather</div>
+    <div style="flow: c">weather</div>
+    </div>
+
+    </body>
+</html>

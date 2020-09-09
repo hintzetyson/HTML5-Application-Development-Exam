@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Using jQuery</title>
+        <script type="text/javascript"
+        src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.5.js">
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("p").click(function () {
+                    $(this).hide();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h2>Click each paragraph after reading it to hide the paragraph</h2>
+            <p>Function names have to start with a letter, underscore, or dollar sign.</p>
+            <p>They must have letters, digits, or underscores.</p>
+            <p>They cannot have periods, slashes, or any other characters.</p>
+        <p>jQuery is cool! Other third-party libraries include Dojo, MooTools, and YUI</p>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Use of session storage</title>
+<script type = "text/javascript">
+
+    function init() {
+        var msg;
+        curLevel = document.getElementById("level");
+        var welcome = document.getElementById("welcome");
+
+        var level = sessionStorage.level;
+        if (level == null || level == '') {
+            msg = "You are new here, so you are at membership level 1. Use the box to change your level.";
+            level = 1;
+        } else {
+            msg = "You are at membership level " + level + ".";
+        }
+        welcome.innerHTML = msg;
+        curLevel.value = level;
+    }
+    function storeLevel() {
+        sessionStorage.level = curLevel.value;
+    }
+
+    function clearLevels() {
+        sessionStorage.clear();
+        location.reload();
+    }
+</script>
+</head>
+<body onload = "init();">
+<h1>Use of session storage</h1>
+<p id = "welcome">Welcome.</p>
+<form>
+You can update your membership level at any time.  Type the new number in the box.
+<input id = "level" type = "number" min = "1" max = 
+   "100"
+       oninput = "storeLevel();" />.
+<button type="button" onclick="clearLevels()">Start over</button>
+</form>
+</body>
+</html>

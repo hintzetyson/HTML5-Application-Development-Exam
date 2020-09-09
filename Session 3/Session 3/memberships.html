@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Membership Rates</title>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <style>
+            #membership {display: none;
+                         
+            }
+        </style>
+        <script type="text/javascript">
+            function showHideMembership() {
+
+                
+                if (document.getElementById("membership").style.display == "none") {
+                    document.getElementById("membership").style.display = "block"
+                }
+                else {
+                    document.getElementById("membership").style.display = "none"
+                }
+            }
+        </script>
+        </head>
+    <body>
+       <h2>Estimate your membership rates</h2> 
+       <p>We have a monthly membership for everyone. Indicate the number of family members you want per membership and the total estimated rate will be calculated.
+       </p>
+        <form id="rates" method="post" action="">
+       <input name ="swimming" type="text"> x $9 for the swimming pool<br/>
+            <input name ="indoor" type="text"> x $15 for the indoor sports area, including the gym <br/>
+            <input name ="outdoor" type="text"> x $10 for the outdoor sports <br/>
+            <br/>
+            Total monthly rate: <input name="total" type="number"> <br />
+            <button type="button" onclick="calculateMe()">Calculate</button>
+             
+        
+        
+        </form>
+         <script type="text/javascript">
+            function calculateMe() {
+                var swimmingtotal = rates.swimming.value * 9;
+                var indoortotal = rates.indoor.value * 15;
+                var outdoortotal = rates.outdoor.value * 10;
+                var grandtotal = swimmingtotal + indoortotal + outdoortotal;
+                rates.total.value = grandtotal;
+            }
+           
+        </script>
+        <p onclick="showHideMembership()">Click to show/hide membership details</p>
+        <div id="membership">
+         Membership is billed monthly. Get a 10% discount if you pay for six monhts at a time.
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Membership Rates</title>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <style>
+            .horizontal li {
+                display:  inline;
+                background-color:  #b6ff00;
+                padding:  .3em;
+            }
+            
+        </style>
+        
+        <script type="text/javascript">
+            function sportDetail(x) {
+                if (x == 1) {
+                    document.getElementById("description").innerHTML = "We have leagues year-round."
+                }
+                else
+                if (x == 2) {
+                    document.getElementById("description").innerHTML = "We have leagues starting in January."
+                }
+                else
+                if (x == 3) {
+                    document.getElementById("description").innerHTML = "We have a league starting in October."
+                }
+                else {
+                    document.getElementById("description").innerHTML = "Click each indoor sport to learn more about sport leagues."
+                }
+            }
+
+
+
+        </script>
+       
+
+    </head>
+    <body>
+        
+        <ul class="horizontal">
+          <li onclick="sportDetail(1)">Basketball</li>
+          <li onclick="sportDetail(2)">Indoor soccer</li>
+          <li onclick="sportDetail(3)">Flag football</li>
+        </ul> 
+        <div id="description"></div>
+    </body>
+</html>

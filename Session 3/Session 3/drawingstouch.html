@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Drawing examples</title>
+
+<script>
+    function loadCanvas() {
+        var cvs = document.getElementById("canvasTest");
+        context = cvs.getContext("2d");
+        context.fillStyle = "rgb(255,0,0)";
+        context.fillRect(10, 20, 100, 100);
+    }
+
+    
+
+</script>
+</head>
+<body onload="loadCanvas();">
+<canvas id = "canvasTest" width="200" height="200">
+</canvas>
+   
+        <br/>
+    <p>Click the box to detect a possible touch screen.</p>
+Tennis ball <br/>
+<svg id="tennisball" height="100">
+    <circle id="greenball" cx="40" cy="40" r="40" fill="#88FF88" />
+</svg>
+
+    </body>
+</html>

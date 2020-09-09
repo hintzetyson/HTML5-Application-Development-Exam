@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Loading Images</title>
+        <script type = "text/javascript">
+            function goodFile(fileToLoad) {
+
+                var fileName = fileToLoad.name;
+                var msg = "You have chosen the file '" + fileName + "'.  Here is the image.";
+                
+                document.getElementById("result").innerHTML = msg;
+                document.getElementById("pic").src = "images\\" + fileName;
+            }
+            function badFile(fileToLoad) {
+                var fileName = fileToLoad.name;
+                var msg = "The file named '" + fileToLoad + "'  is not an image.";
+                
+                document.getElementById("result").innerHTML = msg;
+            }
+
+            function checkFile(item) {
+                
+            }
+</script>
+</head>
+<body>
+<h2>Choose a file to load. Make sure it is an image.</h2>
+<input type = 'file'  onchange = 'checkFile(this);' />
+<p id="result"></p>
+    <img id="pic" />
+</body>
+    
+</html>
